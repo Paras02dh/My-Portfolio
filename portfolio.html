@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paras | Data Analyst Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+
+        }
+
+        strong {
+            color: #ffd700;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(18, 18, 62);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font: 1.01rem;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: .5px;
+            margin: 60px 84px;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 138px 10%;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .firstsection>div {
+            width: 32%;
+        }
+
+        .leftsection {
+            flex: 1;
+            font-size: 3.5rem;
+            line-height: 1.6;
+            min-width: 300px;
+        }
+
+        .secondsection h1 {
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+
+        .thirdsection h1 {
+            margin-top: 88px;
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+        .fourthsection h1 {
+            margin-top: 88px;
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+        .fifthsection h1 {
+            margin-top: 88px;
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+        .sixthsection h1 {
+            margin-top: 88px;
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+        .rightsection {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+        }
+
+        .intro-text,
+        .job-title {
+            white-space: normal;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .job-title .highlight {
+            display: block;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        .animate-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .job-title.animate-text {
+            animation-delay: 0.75s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rightsection img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, right 0.3s ease;
+        }
+
+        .rightsection img:hover {
+            transform: scale(1.3);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .thirdsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .fourthsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+
+        .fifthsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .sixthsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        footer {
+            font-size: 1.2rem;
+            background: rgb(18, 18, 62);
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 40px;
+        }
+
+        .fifthsection div {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .fifthsection div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .fifthsection strong {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .fifthsection em {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .fifthsection a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .fifthsection a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-top: 5px;
+            border-bottom: 3px solid #ffd700;
+        }
+
+        .project-info {
+            padding: 20px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .project-info strong {
+            font-size: 1.4rem;
+            color: #ffd700;
+        }
+
+        .project-info em {
+            color: #aaa;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .project-info a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project-info a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .project-info i.fab.fa-github {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Paras-Portfolio</div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="home" class="firstsection">
+            <div class="leftsection">
+                <div class="intro-text animate-text">Hi, MY name is <span class="highlight">Paras</span></div>
+                <div class="job-title animate-text">
+                    and I am a passionate<br><span class="highlight">Data Analyst</span>
+                </div>
+                <a href="portfolio.pdf" download="Paras_Portfolio" style="text-decoration: none;">
+                    <button style="
+                        background-color:#3737b4;
+                        color: #000;
+                        border: none;
+                        padding: 12px 24px;
+                        font-size: 1.1rem;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        margin-top: 20px;
+                    ">
+                        Download Portfolio
+                    </button>
+                </a>
+
+                </a>
+            </div>
+            <div class="rightsection">
+                <img src="paras.jpg" alt="Paras Photo">
+            </div>
+        </section>
+        <hr>
+        <section id="about" class="secondsection">
+            <h1>🧑‍💻 About Me</h1>
+            <p style="margin-top: 20px; font-size: 1.5rem; line-height: 1.5;">
+                I'm a passionate and detail-oriented Data Analyst student with a strong foundation in data manipulation,
+                statistical analysis, and visualization. I enjoy turning raw data into meaningful insights that drive
+                informed decisions.
+                <br><br>
+                Currently, I'm building my skill set in tools like <strong>Python</strong>, <strong>SQL</strong>,
+                <strong>Excel</strong>, <strong>Power BI</strong>, and <strong>Tableau</strong>, while working on
+                hands-on projects involving data cleaning, exploratory analysis, and predictive modeling. I'm also
+                learning how to communicate data findings effectively through storytelling and visual dashboards.
+                <br><br>
+                Eager to contribute to real-world data challenges, collaborate with teams, and continue growing in the
+                field of <strong>Data analytics</strong>.
+            </p>
+        </section>
+
+        <section id="education" class="thirdsection">
+            <h1>🎓 Education</h1>
+            <div style="margin-top: 20px; font-size: 1.3rem; line-height: 1.8;">
+                <strong>Bachelor of Computer Science</strong><br>
+                Kurukshetra University<br>
+                📅 Aug 2023 – May 2027<br>
+                Major: Artificial Intelligence and Data Science<br>
+                GPA: 7.13/10<br>
+                Relevant Coursework: Data Science Fundamentals, Python Programming, Data Visualization
+                <br><br>
+                <strong>Secondary Education (12th Grade)</strong><br>
+                DAV Public School<br>
+                📅 Apr 2022 – Mar 2023<br>
+                Stream: Science<br>
+                Percentage: 80.1%
+            </div>
+        </section>
+
+        <section id="skills" class="fourthsection">
+            <h1>💻 Technical Skills</h1>
+            <div style="margin-top: 20px; font-size: 1.3rem; line-height: 1.8;">
+                <i class="fas fa-code"></i> Programming Languages: Python (Pandas, NumPy), SQL, R, HTML,
+                C/C++<br>
+                <i class="fas fa-chart-bar"></i> Data Analysis & Visualization Tools: Excel, Power BI,
+                Tableau, Matplotlib, Seaborn<br>
+                <i class="fas fa-database"></i> Database Management: MySQL
+            </div>
+        </section>
+
+        <section id="projects" class="fifthsection">
+            <h1>📝 Projects</h1>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <img src="pizza-project.png" alt="Pizza Sales Project">
+                    <div class="project-info">
+                        <strong>🍕 Pizza Sales Project</strong>
+                        <p> Designed and managed a database for Pizza Hut using SQL. Created and populated tables like
+                            <code>orders</code> <code>order_details</code> and <code>pizza_types</code> to analyze
+                            sales, item demand, and customer order patterns. Queries were written to extract insights
+                            like top-selling pizzas, sales trends by time, and total revenue..</p>
+                        <em>Tools: SQL, Excel</em>
+                        <a href="https://github.com/your-repo" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="titanic-project.jpg" alt="Titanic Data Analysis">
+                    <div class="project-info">
+                        <strong>🛳️ Titanic Data Analysis</strong>
+                        <p>
+                            Combined SQL and Python to analyze the Titanic dataset.
+                            Used SQL for data extraction and initial queries, and Python for data cleaning, exploratory
+                            data analysis (EDA), and visualization of survival trends.
+                        </p>
+                        <em>Tools: SQL, Python, Pandas, Seaborn, Matplotlib</em>
+                        <a href="https://github.com/Paras02dh/TITANIC_DATA_ANALYSIS_PROJECT" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="bookstore-project.png" alt="SQL Bookstore Database Project">
+                    <div class="project-info">
+                        <strong>📚 SQL Bookstore Database</strong>
+                        <p>
+                            Developed a comprehensive database for a bookstore using SQL. Designed tables such as
+                            <code>books</code>, <code>authors</code>, <code>customers</code>, and <code>orders</code> to
+                            manage and query book sales, inventory, and customer transactions. The project includes
+                            complex SQL queries to analyze book sales trends, customer preferences, and top-selling
+                            authors.
+                        </p>
+                        <em>Tools: SQL , Excel</em>
+                        <a href="https://github.com/Paras02dh/SQL-Bookstore-Database" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+
+        <section id="contact" class="sixthsection">
+            <h1>📬 Contact</h1>
+            <div style="margin-top: 20px; font-size: 1.3rem; line-height: 2;">
+                <p>Email: parasdhankhar02@gmail.com </p>
+                <p>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/paras-dhankhar-23ds27" target="_blank"
+                        style="color: #0a66c2; text-decoration: none;">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                </p>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/" target="_blank" style="color: white; text-decoration: none;">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Paras. All rights reserved.</p>
+    </footer>
+</body>
